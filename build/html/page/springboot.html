@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Springboot &mdash; wiki  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Git" href="git.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> wiki
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../example.html">This is a Title</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Springboot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hello">hello</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jdbctemplate">JdbcTemplate</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">wiki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Springboot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/page/springboot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="springboot">
+<h1>Springboot<a class="headerlink" href="#springboot" title="Permalink to this headline">¶</a></h1>
+<p>what’s springboot</p>
+<div class="section" id="hello">
+<h2>hello<a class="headerlink" href="#hello" title="Permalink to this headline">¶</a></h2>
+<p>IDE: eclipse maven</p>
+<p>Maven: <a class="reference external" href="https://www.cnblogs.com/pengyan-9826/p/7767070.html">下载搭建环境</a></p>
+<p>Way:  three ways.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>create in: <a class="reference external" href="https://start.spring.io/">https://start.spring.io/</a>  ,then import</p></li>
+<li><p>create in IDE: <a class="reference external" href="https://blog.csdn.net/xujian_2001/article/details/78894833">some differences</a></p></li>
+<li><p>create in Command(haven’t try)</p></li>
+</ul>
+</div></blockquote>
+<p>Problem:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>is not java source floder:</p></li>
+</ul>
+<blockquote>
+<div><p>这是由于maven项目不是eclipse认识的，到项目目录下执行 <code class="docutils literal notranslate"><span class="pre">mvn</span> <span class="pre">eclipse:eclipse</span></code> 会生成.classpath和.project文件,第一次回下载相关包到本地maven仓库。</p>
+</div></blockquote>
+</div></blockquote>
+<p>Getting Start:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://spring.io/guides/gs/rest-service/">入手项目</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="jdbctemplate">
+<h2>JdbcTemplate<a class="headerlink" href="#jdbctemplate" title="Permalink to this headline">¶</a></h2>
+<p>Getting Start:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://spring.io/guides/gs/relational-data-access/">入手项目</a></p></li>
+<li><p>链接地址 <code class="docutils literal notranslate"><span class="pre">http://localhost:8080/h2-console</span></code> 可以看到h2数据库可视化界面（实操失败）</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="git.html" class="btn btn-neutral float-left" title="Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, xjx
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
