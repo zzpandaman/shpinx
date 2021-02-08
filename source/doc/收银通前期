@@ -1,0 +1,50 @@
+服务器172.20.33.142(测试)、172.20.34.127（预发布）、10.8.17.49（开发），
+账号密码jhzs  XvJ6o51A2nkR3KGO。
+数据库测试环境账号密码：172.20.33.22  3312 
+用户密码: jhzf_dev  ra4G3dUxkE7R
+
+t-syt.lepass.cn
+
+
+接口验证文档：https://docs.qq.com/sheet/DTENxaXdIcmxteENF?tab=l5oxnq
+服务器相关文档：https://docs.qq.com/sheet/DTEhGemhOQXB2YnNJ?tab=BB08J2
+产品给的文档：https://docs.qq.com/sheet/DQkxnclJtUm5ZbExr?tab=5vddzv
+
+一代：syttest Aa123456
+一代下业务员：sytbdtest1 Aa123456
+
+二代：testagent1 Aa123456 133737501
+
+二代：testagent2 Aa123456 133737502
+二代下业务员：sytbdtest3 Aa123456
+
+H9设备sn:911904109607811
+
+QM500设备sn:1973BQ741845
+QM90设备sn:196EBQB95982
+pos机设备sn:1961CA8M6852
+PB01198V61931 --乐刷SN 8010000001--激活码21844224
+197ABQBG5389  --乐刷SN 8020000001 --激活码95192955
+
+hsy测试一代：6210595
+代理商进件后旧后台点击写表：lepos_business.t_channel_agent_id
+
+2112016466
+
+代理商后台：http://t-h5.lepass.cn/wap/syt-saaszs-system/#/login
+好生意：http://t-h5.lepass.cn/hsy-ui/index.html#/login
+账号密码：https://docs.qq.com/doc/DTGVYVnRNQ1N1dWxk
+
+旧pos：
+summer Aa654321
+polo Jiao0905
+聚合运营后台：
+polo Aa654321
+
+打款查询es:all.posbill.t_paybill_new
+
+
+2020-11-06 19:50:19.283 [faabf8cea7754b068f2abed74220ec94] INFO  HttpApiService.get[46]- method=GET,request url=http://t-mobilepos.lepass.cn/cgi-bin/lepos_ServerAdmin.cgi?cmd=bindbySaasAgentPlat&userName=18670047189&merchantID=2112016466&pinpadID=8010000001&bindType=11&operator=1337375&sign=60E7931F84807A927C1E6025396C14BF
+2020-11-06 19:50:19.289 [faabf8cea7754b068f2abed74220ec94] INFO  HttpApiService.get[54]- status=200,contentType=[Content-Type: text/xml; charset=UTF-8]
+2020-11-06 19:50:19.289 [faabf8cea7754b068f2abed74220ec94] INFO  HttpApiService.getXml[83]- response=<?xml version="1.0" encoding="UTF-8"?><root>  <ErrMsg></ErrMsg>  <ErrTip></ErrTip>  <result>-1</result></root>
+2020-11-06 19:50:19.291 [faabf8cea7754b068f2abed74220ec94] INFO  GlobalExceptionHandler.beforeBodyWrite[130]- {"error_code":"-9001","error_msg":""}

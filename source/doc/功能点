@@ -1,0 +1,74 @@
+1.码牌
+
+查询，导出（注意几个状态值）
+saas_common.t_fix_qrcode
+F_qrcode_type	tinyint(3) unsigned	-	NO	MUL		码牌类型：1、乐刷固码，2、银联固码，3、聚合码，4、码牌音响, 5.银联二维码, 6、小程序二维码, 7.乐售云二维码，8.好生意二维码
+F_bind_state	tinyint(3) unsigned	-	NO	MUL		码牌状态：0、未绑定 1、已绑定 2、已解绑 3、初始入库 4.取消入库
+F_bind_type	tinyint(3) unsigned	-	NO			码牌绑定类型：1、手动(已有码)2、自动(商户动态申请)
+F_state	tinyint(3) unsigned	-	NO			码牌交易状态 0、禁用 1、正常
+
+saas_common.t_fix_qrcode_batch
+F_batch_type	tinyint(3) unsigned	-	NO			分配类型：1、乐刷收款二维码，2、聚合码，3、码牌音响 4、银联二维码，5、小程序二维码,6.乐售云二维码，7.好生意二维码
+F_state	tinyint(4)	-	NO			批次状态：0、禁用1、正常2、取消分配
+
+获取码牌（银联的查表，其他http请求）
+leposs_business.t_report_merchant_unionscan_qrcode
+leposs_business.t_report_merchant_unionscan_qrcode_batch
+
+分配
+修改saas_common.t_fix_qrcode，写分拨流水表saas_common.t_fix_qrcode_batch_flow
+
+绑定，解绑
+银联码牌走基础接口
+
+
+2.新增代理商
+费率倒挂检查（1.初始成本最大 2.父级成本倒挂检查）
+lepos.t_agent_common_cost_commission_conf_info  银联（busyType=6 千元以下，busyType=7 千元以上）
+lepos.t_agent_pos_cost_commission_conf_info   刷卡
+lepos.t_agent_nopos_cost_commission_conf_info  扫码
+
+注册中心验证账号可用后，写代理商表
+创建子代会默认创建大区和城市
+（创建团队时读大区和城市表
+创建业务员需要大区，城市，团队）
+mq数据落表：syt.t_online_manage_mq_record
+
+写费率表
+syt.t_online_manage_agent_ext_info,代理商额外信息
+syt.t_online_manage_mq_record，代理商Mq数据落表
+
+
+3.
+分配机具
+lepos.t_agent_machines_import_record
+lepos.t_agent_machines_distribution
+lepos_business.t_saas_agent_distribution_device_record
+查询机具操作记录
+lepos.t_pinpad_bind_log_bypinpadid_
+绑定机具
+lepos.t_pinpad_uuid  （F_pinpad_uuid）sn号-->F_pinpad_id
+lepos.t_pinpad_bind_log_bypinpadid_   （F_pinpad_id）
+syt_business_machine.t_hsy_cashier_area_device  机具2018050305176916绑定或解绑前删除收银点设备表中的记录
+请求接口http://t-mobilepos.lepass.cn/cgi-bin/lepos_ServerAdmin.cgi?cmd=bindbySaasAgentPlat&userName=15707200380&merchantID=7112016451&pinpadID=8900000238&bindType=11&operator=1337375&sign=782A3865683D147F1F1D0FAA34B25F9B
+机具返修
+lepos.t_agent_machines_import_record 判断机具是否归属代理商
+lepos_business.t_sn_repair,返修机具入库
+机具工单
+syt_business_machine.t_hsy_quickrepair_record
+
+0212013294
+
+风控，机具，代理商，业务员，PC插件
+4.系统管理
+
+zx_business.t_message_notification
+zx_business.t_zx_agent_instation_letter
+zx_business.t_online_business_merchant_instation_letter
+
+zx_business.t_feedback
+zx_business.t_feedback_reply
+zx_business.t_help_problem
+
+
+Table 'saasdb.t_signatory_agent_award_rule' doesn't exist

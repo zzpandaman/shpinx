@@ -1,0 +1,58 @@
+{"errCode":"10000","errMsg":"SUCCESS","data":{"merchant_code":"6196427088"}}
+
+{"errCode":"10000","errMsg":"SUCCESS","data":{"store_code":"4789628630"}}
+
+JSONObject.parseObject(JSONObject.parseObject(res).get("data").toString()).get("merchant_code").toString()
+
+
+https://mchh5-test.qinguanjia.com?type=1&out_store_code=5912019507(0)&out_merchant_code=5912019507
+
+
+手握乾坤2112016466
+有交易商户：7810615393
+
+邮箱密码:authcode DBiPDBTmwF8Rjcms
+
+
+172.20.81.8
+
+
+
+
+
+用到
+posbill_scan_profit.t_agent_profit_statement_xx
+51.14 posbill.t_rule_sub_agent_profit_statement_xx
+都是查数据库的
+页面没做时间限制
+
+/home/syt/project-code/juhezs-provider-merchant/src/main/resources/wechat/cert/wx_209096974.p12
+
+
+
+http://inner-baseweb.leshuatrade.com/merchantservice/merchantSettlement/freezeSettle?merchantId=0211719988&reason=商户使用有风险&source=saas_common_syt&type=0
+response={"respCode":-1,"respMsg":"暂不支持该业务线调用"}
+
+
+
+{
+  "list": [
+    {
+      "fAgentId": "1337375",
+      "fCreateTime": "2020-11-06 19:02:57",
+      "fIndustryModel": "T6900",
+      "fIndustryName": "上海商米科技有限公司",
+      "fIsDistributed": 1,
+      "fLastBandTime": "2021-02-05 16:16:31",
+      "fLeshuaModel": "LP801",
+      "fPinpadId": "2020110305212545",
+      "fPinpadSn": "PB01198V61931",
+      "fPosType": "04",
+      "fPresentAgent": "3380985",
+      "fSn": "8010000001",
+      "fStatus": 3
+    }
+  ],
+  "totalCount": 6,
+  "error_code": "0"
+}

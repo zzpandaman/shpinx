@@ -1,0 +1,47 @@
+业务员管理--商户转移
+
+1.商户附加信息表：lepos.t_syt_merchant_ext
+
+2.商户转移记录表：lepos.t_merchant_transfer_record
+
+3.公海商户表：syt.t_merchant_without_salesman
+
+微信认证
+
+认证相关 saasdb.t_report_merchant_wechat_verify
+
+上报相关(微信授权码) leposs_business.t_report_merchant_wechat
+
+分润脚本：
+/**
+ * 结算组分润表：posbill.t_agent_profit_bill_report_daily
+ * 维护业务查询日表：syt_trans.t_agent_profit_daily
+ * 维护业务查询月表：syt_trans.t_agent_profit_month
+ * 历史分润记录表：syt_trans.t_agent_profit_amount_record
+ */
+上海惜石费率补贴：
+/**
+ * 分润补贴：posbill(新).t_merchant_zero_subsidy_transfer_bill
+ * 刷卡交易金额和费率：posbill.t_merchant_t1_channel_bill_(商户号后两位)
+ * 扫码交易金额和费率：posbill_scan_merchant(53.3).t_merchant_settle_account_(商户号后两位)
+ * 打款金额：posbill.t_paybill_ordernew_(商户号后两位)
+ * 补贴账户：posbill_accounting0(81.3).t_ledger_book_(商户号后三位)
+ */
+
+机具相关
+
+select * from syt_machine.t_syt_cashier_area_device
+
+select * from lepos.t_agent_machines_distribution
+
+select * from lepos_business.t_saas_agent_distribution_device_record
+
+select * from lepos.t_agent_machines_import_record
+
+select * from lepos.t_pinpad_uuid
+
+select * from lepos.t_pinpad_00
+
+select * from lepos.t_pinpad_by_merchant_00
+
+select * from lepos.t_pinpad_bind_log_bypinpadid_01

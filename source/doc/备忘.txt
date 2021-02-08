@@ -1,0 +1,41 @@
+代码扫描(已废弃)
+https://10.20.4.100:13443/#/targets 
+syt@yeahka.com   Syt@scan
+
+预发布六代
+1代wujunfengdaili/520163wu
+2代foufoudaili
+3代 18665924690  业务员13237085003  13267086003商户
+4代 18665924691
+5代18665924692
+6代18665924693  业务员13237085004  13267086004商户
+密码都是520163HQqbmg
+
+
+身份证号：320881198107123127
+银行卡号：6013826102045641316
+营业执照：110108016821900
+
+SYTC200000001	16	收银通水晶码牌
+SYTD200000001	17	收银通卡纸码牌
+SYTB200000001	18	博实结码牌
+
+
+
+微信认证聚合接口
+https://api.mch.weixin.qq.com/v3/apply4subject/applyment?applyment_id=2000002165873622
+
+触发上报：http://inner-saas-local.leshuatrade.com/report-apiv2/wechat/subject/report?merchantId=4315614696
+
+测试环境：http://t-saas-local.lepass.cn/report-apiv2/wechat/subject/report?merchantId=11111
+
+更新状态：http://inner-saas-local.leshuatrade.com/report-apiv2/wechat/subject/query?merchantId=5218616766
+
+测试环境：http://t-saas-local.lepass.cn/report-apiv2/wechat/subject/query?merchantId=11111
+
+
+
+
+
+
+

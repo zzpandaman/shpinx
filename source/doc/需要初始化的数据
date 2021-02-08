@@ -1,0 +1,38 @@
+需要初始化的数据：
+
+1.t_hsy_menu菜单表，包含1,2,3级菜单类型，3级菜单为编辑菜单（查看，操作，导出）
+2.t_hsy_role角色表
+3.hsy_role_menu表示角色和菜单之间的关系，一个角色一个菜单id（三级菜单）一条数据
+4.t_hsy_role_user表示用户和角色的关系，一个角色一条数据，每个账号至少有一条数据自己个人的角色数据
+
+注：1.一代有所有权限 2.二代的权限是固定的 3.以上权限控制只针对子账号
+
+5.t_parameter_conf---参数配置表 部分参数和代码key耦合映射
+
+6.t_online_business_message_template  消息模板表--部分参数和代码key耦合映射
+
+7.t_new_mcccode--行业类目4对应的信息表
+
+
+菜单配置（屏蔽对应二级菜单,二级代理商权限添加或与一级代理商保持一致）
+
+库名变更
+lepos.t_hsy_bd->lepos.t_syt_bd
+lepos.t_hsy_city->lepos.t_syt_city
+lepos.t_hsy_team->lepos.t_syt_team
+lepos.t_hsy_zone->lepos.t_syt_zone
+
+
+商户端数据初始化
+INSERT INTO `syt`.`t_hsy_shop_permission`(`F_permission_id`, `F_permission_key`, `F_permission_name`, `F_status`, `F_create_time`, `F_update_time`) VALUES (1, 'income_statistics', '报表', 1, '2020-05-28 16:09:18', '2020-05-28 16:12:57');
+INSERT INTO `syt`.`t_hsy_shop_permission`(`F_permission_id`, `F_permission_key`, `F_permission_name`, `F_status`, `F_create_time`, `F_update_time`) VALUES (2, 'transaction_list', '交易记录', 1, '2020-05-28 16:12:51', '2020-05-28 16:12:52');
+
+风控工单资料上传
+请求来源(1–反洗钱;2–风控;3–聚合;4–渠道;5–在线;6–携机)
+src/main/java/com/yeahka/online/manager/service/rest/RiskCheckService.java
+
+
+
+进件一代后要在旧pos点击某按钮初始化lepos_business.t_channel_agent_id
+
+

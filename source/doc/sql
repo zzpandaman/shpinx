@@ -1,0 +1,52 @@
+
+* 生产加菜单
+
+INSERT INTO `syt`.`t_syt_menu` ( `F_menu_id`, `F_menu_name`, `F_menu_url`, `F_parent_id`, `F_menu_type` ) VALUES ( 3102, '微信上报', '/wxCertification/WxReport', 31, 2 );
+INSERT INTO `syt`.`t_syt_menu` ( `F_menu_id`, `F_menu_name`, `F_menu_url`, `F_parent_id`, `F_menu_type` ) VALUES ( 3103, '支付宝上报', '/wxCertification/AlipayReport', 31, 2 );
+
+
+* 创建下级代理商一代白名单添加
+
+UPDATE `lepos`.`t_agent_info` SET `F_is_three` = 1 WHERE `F_agent_id` in('5151808','2735578','5289263','8260810','1213897','5309235','5315932','7753351','9663129','8351506') 
+
+* 查询新增一代：select F_create_time from t_agent_info where F_agent_level=1 and F_agent_class=7 and F_sub_agent_class=5 order by F_create_time desc
+* 查异常初始化代理商：select F_agent_id,F_create_time  from t_agent_info where  F_agent_class=7 and F_sub_agent_class=5  and F_agent_level !=9 and F_agent_level !=10 and F_agent_id not in(
+select
+  F_agent_parent_id 
+from
+
+  t_syt_bd bd
+  inner JOIN t_syt_team t on bd.F_team_id = t.F_team_id
+  inner JOIN t_syt_city c on t.F_city_id = c.F_city_id
+  inner JOIN t_syt_zone z on z.F_zone_id = c.F_zone_id
+  where F_victual_flag = 1 and F_agent_parent_id in (
+  
+select F_agent_id from t_agent_info where  F_agent_class=7 and F_sub_agent_class=5  and F_agent_level !=9 and F_agent_level !=10 order by F_create_time asc)
+
+)
+select * from t_syt_bd where F_agent_parent_id='2735578'
+select * from t_syt_zone where F_agent_id='2735578'
+select * from t_syt_city where F_agent_id='2735578'
+select * from t_syt_team where F_agent_id='2735578'
+
+* 代理商最高成本
+借记贷记
+UPDATE `lepos`.`t_agent_pos_cost_commission_conf_info` SET  `F_t1_debit_commission_bymillion` = 4200, `F_t1_debit_max_fee_bymillion` = 1900000000, `F_t1_credit_commission_bymillion` = 5300 WHERE `F_agent_id` = '1630905' AND `F_end_count` = -1 AND `F_start_count` = -1 AND `F_start_amount` = -1 AND `F_end_amount` = -1;
+
+微信支付宝
+UPDATE `lepos`.`t_agent_nopos_cost_commission_conf_info` SET `F_t1_weixin_commission_bymillion` = 2300, `F_t1_alipay_commission_bymillion` = 2300 WHERE `F_agent_id` = '1630905' AND `F_end_count` = -1 AND `F_start_count` = -1 AND `F_start_amount` = -1 AND `F_end_amount` = -1;
+
+千元以下银联
+UPDATE `lepos`.`t_agent_common_cost_commission_conf_info` SET `F_t1_debit_commission_bymillion` = 2500, `F_t1_debit_max_fee_bymillion` = 0, `F_t1_credit_commission_bymillion` = 2500 WHERE `F_agent_id` = '1630905' AND `F_pay_type` = 6  AND `F_end_count` = -1 AND `F_start_count` = -1 AND `F_start_amount` = -1 AND `F_end_amount` = -1;
+
+千元以上银联
+UPDATE `lepos`.`t_agent_common_cost_commission_conf_info` SET `F_t1_debit_commission_bymillion` = 5300, `F_t1_debit_max_fee_bymillion` = 1900000000, `F_t1_credit_commission_bymillion` = 5300 WHERE `F_agent_id` = '1630905' AND `F_pay_type` = 7  AND `F_end_count` = -1 AND `F_start_count` = -1 AND `F_start_amount` = -1 AND `F_end_amount` = -1;
+
+
+*xxljob
+curl -X POST 'http://172.20.33.142:8269/merchant/job/initAgent1gBdInfo?startSearchTime=2021-01-17%2014:25:54'
+curl 'http://172.20.34.127:8269//merchant/job/initAgent1gBdInfo?startSearchTime=2021-01-21%2014:25:54'
+curl 'http://172.20.34.127:8269//merchant/orderSystem/addAppIdConfig?merchantId=9613716423'
+curl 'http://172.20.61.181:8269//merchant/job/initAgent1gBdInfo?startSearchTime=2020-01-10%2014:25:54'
+
+

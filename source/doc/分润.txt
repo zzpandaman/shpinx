@@ -1,0 +1,20 @@
+分润查询posbill.t_agent_profit_bill_report_daily
+1.F_agent_profit_amount_bywan	bigint   分润(包含子代)，百万分之一分
+2.F_self_agent_profit_amount_bywan	分润(不包含子代)，百万分之一分
+3.F_lower_high_profit_bymillion	抽取下级的高签利润，百万分之一分
+4.F_high_profit_bymillion 被上级抽走的高签利润,百万分之一分
+分润金额=2-3+4
+
+posbill.t_agent_withdraw_apply_order
+posbill.t_agent_withdraw_order
+
+代理商资金池
+/back-manager/agentProfit/getProfitRecord
+/back-manager/agentProfit/getLastProfit?agentId=6210595
+syt_trans.t_agent_profit_amount_record
+
+
+
+
+数据日报
+hsy.hsy_stat_core_table  -->  syt_report.hsy_stat_core_table
