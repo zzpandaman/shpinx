@@ -22,6 +22,8 @@ syt
  * `jekins <http://jk-saas.leshuatrade.com/login>`_
  * `yapi <http://yapi.lepass.cn/login>`_
  * `dbtools <http://dbtools.lepass.cn/login/>`_
+ * `需求进度 <https://docs.qq.com/sheet/DWm1yemRQdGlYQmhs?tab=w6c6fn>`_
+ * `数据看板 <https://syt-databoard.leshuazf.com/>`_
 
 .. _pc后台测试: http://t-h5.lepass.cn/wap/syt-saaszs-system/#/login
 .. _pc后台预发布: http://p-h5.lepass.cn/wap/syt-saaszs-system/#/login
