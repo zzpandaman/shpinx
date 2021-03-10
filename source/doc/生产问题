@@ -1,0 +1,13 @@
+春笋计划挂起：
+白名单表：syt.t_bamboo_plan_agent
+汇总：syt_report.syt_bonus_summary
+商户开通明细：syt_report.syt_merchant_opening_bonus_detail
+交易奖励明细；syt_report.syt_transaction_bonus_detail
+购机金明细：syt_report.syt_equipment_bonus_detail
+
+待上线：
+用户组新增未写入代理商编号：src/main/resources/mapper/zx_business/RoleDao.xml
+
+子代分润设置与显示不符：src/main/java/com/yeahka/online/manager/service/agent/impl/AgentInfoServiceImpl.java
+
+新增下级代理商：添加日志

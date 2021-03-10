@@ -10,6 +10,6 @@ Welcome to Panda's wiki
    :maxdepth: 3
    :caption: Contents:
    
-   page/help
-   page/doc
-   page/syt
+   page/syt_help
+   page/syt_business
+   page/syt_problem
